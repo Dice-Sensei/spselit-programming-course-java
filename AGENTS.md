@@ -110,3 +110,4 @@ When a "big word" first appears on a session page, give an inline explanation of
 - Never add solutions to challenge exercises.
 - Never name the later project options. Students only know that the second half of the year is about building their own project.
 - Never reference other repositories.
+- Never commit or push. Committing is the course leader's job; leave changes in the working tree.
