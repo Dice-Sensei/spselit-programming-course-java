@@ -18,7 +18,7 @@ What a student can do after this session.
 
 Explanation, with big words explained inline and linked to their concept pages.
 
-Example: [Example.java](examples/Example.java)
+Example: `examples/Example.java`
 
 ### Exercises
 
