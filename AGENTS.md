@@ -64,11 +64,23 @@ type: concept
 title: Compiler
 summary: Translates Java source code into bytecode before the program runs.
 sessions: [01-kickoff]
-status: stub             # stub | draft | complete
+status: draft            # draft | complete
 ---
 ```
 
 The concept page's `summary` is the single source for its short explanation. Inline explanations on session pages must agree with it.
+
+## Concept pages
+
+Write every concept page in full when you create it. Never create a stub or a page that is "to be extended later". Start from `templates/concept.md`. Each page has:
+
+- the summary paragraph, then `## How it works` with `###` subsections that go beyond the lecture's short description, for students who want to understand more;
+- `## Example` with runnable code and its real output (run it before you write it down);
+- `## Common confusions` with one `###` entry per misconception;
+- `> [!TIP]` **From Python:** and **From C#:** comparisons where they add something;
+- `## Further reading` with links to the official documentation.
+
+Only state facts you have verified by running code or that are well established. Prefer including more; the leader culls. Status is `draft` when written, and `complete` once the leader has reviewed it.
 
 ## Formatting rules
 
