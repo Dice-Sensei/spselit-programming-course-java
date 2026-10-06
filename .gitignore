@@ -1,6 +1,9 @@
 my-work/*
 !my-work/README.md
-.obsidian/workspace*.json
 *.class
 .idea/
 out/
+
+# Obsidian files
+.obsidian/*
+!.obsidian/app.json
