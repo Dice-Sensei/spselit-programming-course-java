@@ -92,7 +92,7 @@ Close the terminal and open a new one after installing; an already open terminal
 
 A standard Java setup has `JAVA_HOME` pointing to the JDK folder and the JDK's `bin` folder on `PATH`. Use this if the installer didn't do it. Replace the folder with where your JDK actually is.
 
-**Windows:** press the Windows key, search for "Edit the system environment variables", click "Environment Variables". Under "User variables" add a new variable `JAVA_HOME` with the JDK folder (for example `C:\Program Files\Eclipse Adoptium\jdk-25`). Then select `Path`, click Edit → New, and add `%JAVA_HOME%bin`. Click OK everywhere and open a **new** terminal.
+**Windows:** press the Windows key, search for "Edit the system environment variables", click "Environment Variables". Under "User variables" add a new variable `JAVA_HOME` with the JDK folder (for example `C:\Program Files\Eclipse Adoptium\jdk-25`). Then select `Path`, click Edit → New, and add `%JAVA_HOME%\bin`. Click OK everywhere and open a **new** terminal.
 
 **macOS / Linux:** add these lines to `~/.zshrc` (macOS) or `~/.bashrc` (Linux), then open a new terminal. On macOS the JDK path can be found with `/usr/libexec/java_home -v 25`.
 
