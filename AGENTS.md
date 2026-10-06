@@ -25,7 +25,7 @@ README.md          start page: overview, schedule, how the wiki works
 AGENTS.md          this file
 setup.md           installing the JDK and IntelliJ, common problems
 templates/         session.md, concept.md
-sessions/NN-name/  README.md (session page), examples/, exercises/, live/, solutions/
+sessions/NN-name/  README.md (session page), examples/, exercises/, live/
 concepts/          README.md (index) and one page per "big word"
 advent-of-code/    added later
 my-work/           git-ignored; students' own code
@@ -34,7 +34,6 @@ my-work/           git-ignored; students' own code
 - `examples/`: runnable examples shown on the page.
 - `exercises/`: starter code.
 - `live/`: code written live in the lecture, pushed afterwards.
-- `solutions/`: core and extra solutions only, published with the next session's skeleton.
 
 ## Page types and frontmatter
 
@@ -99,7 +98,6 @@ After a lecture, for each block that was not covered:
 3. Fix unclear examples.
 4. Move unfinished blocks (see above).
 5. Set `status: updated`.
-6. Publish core and extra solutions together with the next session's skeleton.
 
 ## Big words
 
@@ -107,7 +105,7 @@ When a "big word" first appears on a session page, give an inline explanation of
 
 ## Hard rules
 
-- Never add solutions to challenge exercises.
+- Never add solutions to any exercise. Solutions are not part of this repository.
 - Never name the later project options. Students only know that the second half of the year is about building their own project.
 - Never reference other repositories.
 - Never commit or push. Committing is the course leader's job; leave changes in the working tree.
