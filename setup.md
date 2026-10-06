@@ -58,7 +58,11 @@ You should see `Hello, Java!`.
 
 ## 4. Install IntelliJ IDEA
 
-Download the free **IntelliJ IDEA** (the Community edition, or the current free edition offered on the JetBrains download page) and install it. It is about 1 GB, so start the download early and let it run in the background. You don't need it for the first hour.
+Download the [**IntelliJ IDEA**](https://www.jetbrains.com/idea/) and install it. It is free (the base version).
+
+> [!TIP]
+> **Education edition available:**
+> Students with ISIC can apply for whole JetBrains suite - access tools at no cost for the duration of your studies.
 
 ## 5. On a weaker laptop
 
