@@ -3,7 +3,7 @@ type: concept
 title: JIT compiler
 summary: The part of the JVM that turns frequently used bytecode into machine code while the program is running.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # JIT compiler

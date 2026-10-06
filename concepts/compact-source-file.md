@@ -3,7 +3,7 @@ type: concept
 title: Compact source file
 summary: A Java file with a main method and no class around it, run directly with java File.java.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # Compact source file

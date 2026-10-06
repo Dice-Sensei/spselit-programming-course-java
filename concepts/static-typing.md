@@ -3,7 +3,7 @@ type: concept
 title: Static typing
 summary: Every variable has a type that the compiler checks before the program runs.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # Static typing

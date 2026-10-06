@@ -3,7 +3,7 @@ type: concept
 title: Primitive type
 summary: A basic built-in type such as int or double that holds a plain value.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # Primitive type

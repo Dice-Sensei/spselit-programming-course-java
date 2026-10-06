@@ -3,7 +3,7 @@ type: concept
 title: JDK
 summary: The Java Development Kit, the tools you need to write, compile and run Java programs.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # JDK

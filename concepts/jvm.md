@@ -3,7 +3,7 @@ type: concept
 title: JVM
 summary: The Java Virtual Machine, the program that runs Java bytecode.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # JVM

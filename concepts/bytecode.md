@@ -3,7 +3,7 @@ type: concept
 title: Bytecode
 summary: The compact instruction format that the compiler produces and the JVM runs.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # Bytecode

@@ -3,7 +3,7 @@ type: concept
 title: Compiler
 summary: Translates Java source code into bytecode before the program runs.
 sessions: [01-kickoff]
-status: draft
+status: complete
 ---
 
 # Compiler
