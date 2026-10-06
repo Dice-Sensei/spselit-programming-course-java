@@ -24,9 +24,6 @@ Download the `.pkg` installer for JDK 25 and run it. Choose the right one for yo
 
 Install JDK 25 from your package manager, for example `sudo apt install openjdk-25-jdk` on Debian or Ubuntu if the package is available, or unpack the `.tar.gz` from Temurin and add its `bin` folder to `PATH`.
 
-> [!TIP]
-> If the Wi-Fi is slow, don't download in class. The leader has the installers on a USB stick that goes around.
-
 ## 2. Check your Java version
 
 Open a terminal (on Windows: PowerShell or Command Prompt) and run:
@@ -66,7 +63,7 @@ Download the [**IntelliJ IDEA**](https://www.jetbrains.com/idea/) and install it
 
 ## 5. On a weaker laptop
 
-If your laptop has less than about 8 GB of RAM, IntelliJ may be slow. Keep using a text editor and the terminal, or use VS Code with the "Extension Pack for Java". Nothing in the autumn needs an IDE.
+If your laptop has less than about 8 GB of RAM, IntelliJ may be slow. Keep using a text editor and the terminal, or use VS Code with the "Extension Pack for Java".
 
 ## 6. Getting the course files
 
@@ -106,10 +103,6 @@ Java itself is open source (the **OpenJDK** project). Several companies build th
 | Red Hat, SAP, and others | Their own builds | Mostly used with their own products |
 
 For this course, **any of these works**, as long as it is version 25 or newer. Your package manager or IntelliJ may also offer to download a JDK for you (IntelliJ: File → Project Structure → SDKs → Add SDK → Download JDK).
-
-> [!TIP]
-> **From Python:**
-> This is like having CPython, Anaconda and PyPy: one language, several builds from different providers. In Java the choice of vendor rarely matters for your code, but the **version number** does.
 
 ## Common problems
 
