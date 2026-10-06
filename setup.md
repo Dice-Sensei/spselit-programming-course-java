@@ -6,7 +6,7 @@ status: draft
 
 # Setup
 
-You need **JDK 25** (the Java Development Kit). Nothing else is required to start. IntelliJ IDEA is optional and can come later.
+You need **JDK 25 or newer** (the Java Development Kit). The course is written for 25; any newer version works too. Nothing else is required to start. IntelliJ IDEA is optional and can come later.
 
 ## 1. Install the JDK 25
 
@@ -35,7 +35,7 @@ Open a terminal (on Windows: PowerShell or Command Prompt) and run:
 java -version
 ```
 
-The first line of the output must contain `25`, for example `openjdk version "25" ...`. If it shows another number (such as 17 or 21) or nothing at all, see [Common problems](#common-problems).
+The first line of the output must show version **25 or higher**, for example `openjdk version "25" ...`. If it shows a lower number (such as 17 or 21) or nothing at all, see [Common problems](#common-problems).
 
 ## 3. Your first program without an IDE
 
@@ -76,9 +76,9 @@ Or in IntelliJ: File → New → Project from Version Control, and paste the URL
 
 ## Common problems
 
-### `java -version` doesn't show 25, or `void main()` gives a "preview" error
+### `java -version` shows a version below 25, or `void main()` gives a "preview" error
 
-You probably have an older JDK left over from another class (for example Java 21). On an older JDK, the compact `void main()` program fails with a confusing error mentioning *preview features* or an *unnamed class*. Check that the first line of `java -version` contains `25`. If not, install JDK 25 (step 1) and open a **new** terminal. If several JDKs are installed, make sure `PATH` and `JAVA_HOME` point to JDK 25.
+You probably have an older JDK left over from another class (for example Java 21). On an older JDK, the compact `void main()` program fails with a confusing error mentioning *preview features* or an *unnamed class*. Check that the first line of `java -version` shows 25 or higher. If not, install JDK 25 or newer (step 1) and open a **new** terminal. If several JDKs are installed, make sure `PATH` and `JAVA_HOME` point to the new JDK (see [Setting PATH and JAVA_HOME](#setting-path-and-java_home)).
 
 ### Notepad saved `Hello.java.txt`
 
@@ -86,4 +86,19 @@ On Windows, Notepad may save the file as `Hello.java.txt`, and then `java Hello.
 
 ### `java` is not recognized as a command (Windows)
 
-Close the terminal and open a new one after installing; an already open terminal doesn't see the new `PATH`. If it still fails, check that the JDK's `bin` folder is in `PATH`, or rerun the installer with the "Add to PATH" option enabled.
+Close the terminal and open a new one after installing; an already open terminal doesn't see the new `PATH`. If it still fails, check that the JDK's `bin` folder is in `PATH`, or rerun the installer with the "Add to PATH" option enabled. Or set it by hand, as described next.
+
+### Setting PATH and JAVA_HOME
+
+A standard Java setup has `JAVA_HOME` pointing to the JDK folder and the JDK's `bin` folder on `PATH`. Use this if the installer didn't do it. Replace the folder with where your JDK actually is.
+
+**Windows:** press the Windows key, search for "Edit the system environment variables", click "Environment Variables". Under "User variables" add a new variable `JAVA_HOME` with the JDK folder (for example `C:\Program Files\Eclipse Adoptium\jdk-25`). Then select `Path`, click Edit → New, and add `%JAVA_HOME%in`. Click OK everywhere and open a **new** terminal.
+
+**macOS / Linux:** add these lines to `~/.zshrc` (macOS) or `~/.bashrc` (Linux), then open a new terminal. On macOS the JDK path can be found with `/usr/libexec/java_home -v 25`.
+
+```
+export JAVA_HOME=/path/to/jdk-25
+export PATH="$JAVA_HOME/bin:$PATH"
+```
+
+Check with `java -version` and `echo $JAVA_HOME` (Windows PowerShell: `echo $env:JAVA_HOME`).
