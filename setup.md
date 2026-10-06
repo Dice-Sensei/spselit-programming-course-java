@@ -10,7 +10,7 @@ You need **JDK 25 or newer** (the Java Development Kit). The course is written f
 
 ## 1. Install the JDK 25
 
-Any JDK 25 distribution works. [Eclipse Temurin](https://adoptium.net/) is a good, free choice.
+Any JDK 25 distribution works. [Eclipse Temurin](https://adoptium.net/) is a good, free choice. If you are unsure which one to pick, see [Java versions and who provides them](#java-versions-and-who-provides-them).
 
 ### Windows
 
@@ -73,6 +73,39 @@ git clone https://github.com/Dice-Sensei/spselit-programming-course-java.git
 ```
 
 Or in IntelliJ: File → New → Project from Version Control, and paste the URL `https://github.com/Dice-Sensei/spselit-programming-course-java.git`.
+
+## Java versions and who provides them
+
+### Versions
+
+- A new Java version is released **every six months**, in March and September. The number goes up by one each time (24, 25, 26, 27, ...).
+- Every two years one version is an **LTS** (Long-Term Support) release, which gets updates for many years. The LTS versions are 8, 11, 17, 21 and **25**. Versions in between (26, 27, ...) are supported only until the next release comes out.
+- This course uses **25**, the current LTS, because it is the first LTS where the compact `void main()` and `IO.println` used in S1 are final features. A newer version (26, 27, ...) also works.
+- Older versions (8, 11, 17, 21) are still used in industry and may already be on your laptop. Programs written for them run on 25, but our S1 examples do not run on them.
+
+> [!NOTE]
+> **Česky:**
+> Nová verze Javy vychází každého půl roku (březen, září). LTS verze (8, 11, 17, 21, 25) mají dlouhou podporu. V kurzu používáme 25 nebo novější.
+
+### Who provides the JDK
+
+Java itself is open source (the **OpenJDK** project). Several companies build the OpenJDK source code and publish a ready-to-install JDK, which they call a *distribution* or *build*. They all contain the same Java; they differ in who maintains them, how long they provide updates, and license terms.
+
+| Provider | Distribution | Notes |
+|---|---|---|
+| Eclipse Foundation (Adoptium) | Temurin | Free, community-driven, a safe default for learning |
+| Oracle | Oracle JDK, and OpenJDK builds at jdk.java.net | Oracle JDK has its own license; check it before using it commercially. The jdk.java.net builds are for the latest version only and get no long-term updates |
+| Amazon | Corretto | Free, used in Amazon's own services |
+| Microsoft | Microsoft Build of OpenJDK | Free |
+| Azul | Zulu | Free builds, paid support available |
+| BellSoft | Liberica | Free builds, paid support available |
+| Red Hat, SAP, and others | Their own builds | Mostly used with their own products |
+
+For this course, **any of these works**, as long as it is version 25 or newer. Your package manager or IntelliJ may also offer to download a JDK for you (IntelliJ: File → Project Structure → SDKs → Add SDK → Download JDK).
+
+> [!TIP]
+> **From Python:**
+> This is like having CPython, Anaconda and PyPy: one language, several builds from different providers. In Java the choice of vendor rarely matters for your code, but the **version number** does.
 
 ## Common problems
 
