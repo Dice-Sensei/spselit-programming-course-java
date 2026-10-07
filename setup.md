@@ -61,13 +61,14 @@ Download the [**IntelliJ IDEA**](https://www.jetbrains.com/idea/) and install it
 > **Education edition available:**
 > Students with ISIC can apply for whole JetBrains suite - access tools at no cost for the duration of your studies.
 
+> [!WARNING]
+> IntelliJ IDEA works on project level with modules not on independent files. And for project/module it can compile/run only java files in folders marked as **sources** or **tests**. For that reason it is required to configure **Project structure** (Hamburger menu -> File -> Project Structure...) before usage.
+
 ## 5. On a weaker laptop
 
 If your laptop has less than about 8 GB of RAM, IntelliJ may be slow. Keep using a text editor and the terminal, or use VS Code with the "Extension Pack for Java".
 
 ## 6. Getting the course files
-
-*From S2/S3 on.* In S1 you only read the wiki on GitHub; there is nothing to clone yet.
 
 ```
 git clone https://github.com/Dice-Sensei/spselit-programming-course-java.git
