@@ -23,7 +23,7 @@ Materials are in English, because professional programming is done in English. W
 **October–November: Java core with a strong focus on object-oriented programming**
 
 - [S1 — Kickoff and first programs](sessions/01-kickoff/README.md) (7 October)
-- S2 — Methods, strings and arrays
+- [S2 — Methods, arrays and strings](sessions/02-methods-arrays-strings/README.md)
 - S3 — OOP and classes
 - S4 — Collections, generics and composition
 - S5 — Inheritance and polymorphism
