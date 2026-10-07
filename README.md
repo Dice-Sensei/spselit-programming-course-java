@@ -10,6 +10,12 @@ An optional, project-based Java course for students who have programmed before i
 
 Materials are in English, because professional programming is done in English. Where a concept is easier in Czech, there is a short Czech note. The lecture itself is spoken in Czech.
 
+## Acknowledgement
+
+This repository was created as part of project between [Dice-Sensei](https://github.com/Dice-Sensei) and [SPŠ el-it Dobruška](https://spselitdobruska.cz/).
+And can be used by any **human** for learning purposes.
+Either as part of the school curriculum as an addition to it or for self-studying.
+
 ## How this wiki works
 
 - **Session pages are made of blocks.** Each block is one `##` section with its own explanation, examples and exercises.
