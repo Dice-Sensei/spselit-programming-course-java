@@ -2,14 +2,15 @@
 type: session
 title: Kickoff and first programs
 session: 1
-status: skeleton
+status: updated
 blocks:
-  - {name: setup, status: planned}
-  - {name: first-program, status: planned}
-  - {name: ide, status: planned}
-  - {name: control-flow, status: planned}
-  - {name: methods, status: planned, optional: true}
-  - {name: input, status: planned, optional: true}
+  - {name: setup, status: done}
+  - {name: first-program, status: done}
+  - {name: ide, status: done}
+  - {name: control-flow, status: done}
+  - {name: loops, status: moved-to-02}
+  - {name: methods, status: moved-to-02, optional: true}
+  - {name: input, status: moved-to-02, optional: true}
 concepts: [jdk, jvm, compiler, bytecode, static-typing, primitive-type, compact-source-file]
 ---
 
@@ -22,6 +23,8 @@ By the end of this session you have Java installed, you can write and run a smal
 ## Setup
 
 Install the JDK and check that `java -version` shows 25 or higher. Follow the [setup guide](../../setup.md#2-check-your-java-version). If something goes wrong, see [common problems](../../setup.md#common-problems).
+
+If you cannot install Java yet, you can still follow along in an online compiler such as [OneCompiler](https://onecompiler.com/java). Paste the code into the editor and press Run; nothing needs to be installed. Online compilers may run an older Java version, so the compact `void main()` and `IO.println` examples can fail there. In that case, use the traditional form, [HelloOld.java](examples/HelloOld.java), as a starting point.
 
 ## First program without an IDE
 
@@ -44,6 +47,8 @@ Run it with:
 ```
 java Hello.java
 ```
+
+For comparison, the same program in the traditional form, with a class and `public static void main(String[] args)`: [HelloOld.java](examples/HelloOld.java).
 
 Java uses [static typing](../../concepts/static-typing.md): every variable has a type, and the compiler checks the types before the program runs. The basic types such as `int`, `double`, `boolean` and `char` are [primitive types](../../concepts/primitive-type.md), which hold plain values. `String` holds text.
 
@@ -76,41 +81,30 @@ Install IntelliJ IDEA, open the same `Hello.java`, and see what an IDE adds: hig
 
 Example: [ControlFlow.java](examples/ControlFlow.java)
 
-The `if`/`else` statement chooses between two branches, `for` repeats a fixed number of times, and `while` repeats as long as a condition is true.
+The `if`/`else` statement chooses between two branches depending on a condition. Loops are the next block.
 
 ### Exercises
 
 **Core**
 
-- FizzBuzz.
-- A Celsius-to-Fahrenheit table with a `for` loop.
+- Print a greeting based on the hour of the day (an `int`), for example "Good morning" or "Good evening".
 
-**Extra**
+## Loops
 
-- A number-guessing game (needs the [user input](#user-input-if-time-allows) block).
-
-**Challenge**
-
-- All primes up to N, or a triangle drawn with `*`.
+→ Continued in [S2](../02-methods-arrays-strings/README.md#loops)
 
 ## Methods (if time allows)
 
-Example: [Methods.java](examples/Methods.java)
-
-A method gives a name to a piece of code that takes inputs and returns a result.
-
-### Exercises
-
-**Core**
-
-- Turn the temperature conversion into its own method.
+→ Continued in [S2](../02-methods-arrays-strings/README.md#methods)
 
 ## User input (if time allows)
 
-Example: [Input.java](examples/Input.java)
-
-`IO.readln` reads a line of text from the keyboard. Combine it with `Integer.parseInt` to turn the text into a number.
+→ Continued in [S2](../02-methods-arrays-strings/README.md#user-input-if-time-allows)
 
 ## Lecture notes
 
-<!-- filled after the lecture -->
+- Covered: setup, the first program without an IDE, the IDE, and `if`/`else`.
+- Exercise done in class: a greeting chosen from the hour of the day (an `int`).
+- `for` and `while` were not reached, so the loops block moved to S2.
+- The same program was also shown in the traditional form, [HelloOld.java](examples/HelloOld.java), to compare with the compact `void main()`.
+- Problems with internet connectivity caused some delays

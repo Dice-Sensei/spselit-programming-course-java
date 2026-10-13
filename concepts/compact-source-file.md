@@ -43,7 +43,7 @@ When the [compiler](compiler.md) sees code outside any class, it creates a class
 ### What is allowed
 
 - **A `main` method without the ceremony.** `void main()` is enough. It may also take the command-line arguments (`void main(String[] args)`), but it does not have to. The traditional `public static void main(String[] args)` still works too.
-- **Top-level methods and variables.** You can write helper methods next to `main`, as in `Methods.java` in S1, and call them directly.
+- **Top-level methods and variables.** You can write helper methods next to `main`, as in [Methods.java](../sessions/02-methods-arrays-strings/examples/Methods.java) in S2, and call them directly.
 - **Imports.** You can write `import` lines at the top, as usual.
 - **Automatic access to the core library.** The whole of the `java.base` module is imported for you. This means that `List`, `ArrayList`, `Map`, `Path` and others from `java.util`, `java.io` and `java.nio.file` can be used without any `import` line.
 - **Extra classes in the same file.** You can declare further classes, records or enums below `main`. This is a gentle way to move from "just methods" to object-oriented code in S3.

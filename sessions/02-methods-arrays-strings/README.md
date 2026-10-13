@@ -4,6 +4,8 @@ title: Methods, arrays and strings
 session: 2
 status: skeleton
 blocks:
+  - {name: loops, status: planned}
+  - {name: input, status: planned, optional: true}
   - {name: methods, status: planned}
   - {name: arrays, status: planned}
   - {name: strings, status: planned}
@@ -20,6 +22,33 @@ By the end of this session you can write your own methods with parameters and re
 
 > [!NOTE]
 > This page works on its own: you do not need S1 to follow it. You need JDK 25 or newer; if `java Hello.java` fails with an error mentioning "preview" or "unnamed class", see the setup guide's [common problems](../../setup.md#common-problems).
+
+## Loops
+
+Example: [Loops.java](examples/Loops.java)
+
+`for` repeats a fixed number of times, and `while` repeats as long as a condition is true.
+
+### Exercises
+
+**Core**
+
+- FizzBuzz.
+- A Celsius-to-Fahrenheit table with a `for` loop.
+
+**Extra**
+
+- A number-guessing game (needs the [user input](#user-input-if-time-allows) block).
+
+**Challenge**
+
+- All primes up to N, or a triangle drawn with `*`.
+
+## User input (if time allows)
+
+Example: [Input.java](examples/Input.java)
+
+`IO.readln` reads a line of text from the keyboard. Combine it with `Integer.parseInt` to turn the text into a number.
 
 ## Methods
 
@@ -39,7 +68,7 @@ The name together with the parameter types, here `square(int)`, is the [method s
 
 A variable declared inside a method exists only inside it, which is called its *scope*. Two methods can each have their own variable called `result`.
 
-Example: [Signatures.java](examples/Signatures.java)
+Examples: [Methods.java](examples/Methods.java) (a first method, a temperature conversion) and [Signatures.java](examples/Signatures.java)
 
 ### Overloading
 
