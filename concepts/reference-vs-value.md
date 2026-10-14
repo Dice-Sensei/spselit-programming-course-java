@@ -72,6 +72,10 @@ alias[0] = 99;    // nums[0] is 99 too
 
 `nums` and `alias` are two names for one array. Programmers say they are *aliases*. This is the same effect as passing an array to a method, since passing a parameter is an assignment to the parameter.
 
+### Objects of your own classes
+
+Objects you create from your own [classes](class.md) behave exactly like arrays here. `Die c = a;` copies the reference, so `c` and `a` are two names for one `Die`, and rolling `a` changes what `c` shows. See [TwoDice.java](../sessions/03-oop-classes/examples/TwoDice.java).
+
 ### `null`
 
 A reference variable may refer to nothing, which is written `null`. Using it (for example `a.length` when `a` is `null`) throws a `NullPointerException`. Primitive variables can never be `null`.
