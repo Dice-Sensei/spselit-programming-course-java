@@ -30,7 +30,7 @@ Either as part of the school curriculum as an addition to it or for self-studyin
 
 - [S1 — Kickoff and first programs](sessions/01-kickoff/README.md) (7 October)
 - [S2 — Methods, arrays and strings](sessions/02-methods-arrays-strings/README.md)
-- S3 — OOP and classes
+- [S3 — OOP and classes](sessions/03-oop-classes/README.md)
 - S4 — Collections, generics and composition
 - S5 — Inheritance and polymorphism
 - S6 — Interfaces, enums and OOP design
