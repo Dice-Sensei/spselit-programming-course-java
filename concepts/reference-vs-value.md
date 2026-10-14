@@ -15,7 +15,7 @@ Primitives are copied when passed around; for objects and arrays the reference i
 A Java variable holds one of two kinds of content:
 
 - **A value:** variables of a [primitive type](primitive-type.md) (`int`, `double`, `boolean`, `char`, ...) contain the number or truth value itself.
-- **A reference:** variables of every other type (arrays, `String`, and all objects) contain a *reference*, which tells the [JVM](jvm.md) where in the heap the actual array or object lives. It is something like an address, or the "remote control" for the thing.
+- **A reference:** variables of every other type (arrays, `String`, and all [objects](object.md)) contain a *reference*, which tells the [JVM](jvm.md) where in the heap the actual array or object lives. It is something like an address, or the "remote control" for the thing.
 
 Copying a variable always copies *what it contains*. For a primitive that gives you a second, independent number. For a reference it gives you a second reference to the **same** array or object.
 

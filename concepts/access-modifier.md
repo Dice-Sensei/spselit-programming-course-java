@@ -72,7 +72,7 @@ It is package access, which is wider than `private` and narrower than `public`. 
 
 ### "`private` hides it from the whole file"
 
-It limits access to the class. Two classes in the same file are still separate classes. (Compact source files are an exception, see [encapsulation](encapsulation.md).)
+It limits access to the class. Two classes in the same file are still separate classes. (A [compact source file](compact-source-file.md) is an exception: see [encapsulation](encapsulation.md).)
 
 > [!TIP]
 > **From Python:**

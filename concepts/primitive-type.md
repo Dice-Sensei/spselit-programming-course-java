@@ -12,7 +12,7 @@ A basic built-in type such as int or double that holds a plain value.
 
 ## How it works
 
-Java has eight primitive types, including `int`, `long`, `double`, `boolean` and `char`. A variable of a primitive type stores the value itself. `String` is not primitive; it is an object.
+Java has eight primitive types, including `int`, `long`, `double`, `boolean` and `char`. A variable of a primitive type stores the value itself. `String` is not primitive; it is an [object](object.md).
 
 ### The eight types
 

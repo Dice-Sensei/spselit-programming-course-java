@@ -67,7 +67,7 @@ This works, but it is slow, because each step copies everything built so far. Ja
 - The **wrapper classes** `Integer`, `Double`, `Boolean`, ... (S4).
 - **Records** (S4) are shallowly immutable by design.
 - **Primitive values** are not objects, but they behave like immutable values: you can store a different number in a variable, but you cannot change "the number 5".
-- You can also write your own immutable classes: make all fields `final` and give them no setters (S3 and later).
+- You can also write your own immutable classes: make all fields `private` and `final` and give them no setters. Keeping the fields private is [encapsulation](encapsulation.md); without it, outside code could change them directly (S3 and later).
 
 ### `final` is not immutability
 

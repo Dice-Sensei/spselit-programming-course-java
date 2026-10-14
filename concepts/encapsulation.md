@@ -74,7 +74,7 @@ No. Add only the operations the class should offer. A getter and setter for ever
 
 ### "It works in my compact file"
 
-In a compact source file, classes are members of the file's hidden class and can see each other's `private` members. The class-versus-class check applies to classes declared as ordinary top-level classes, which is why the examples for this concept use the classic layout.
+In a [compact source file](compact-source-file.md), classes are members of the file's hidden class and can see each other's `private` members. The class-versus-class check applies to classes declared as ordinary top-level classes, which is why the examples for this concept use the classic layout.
 
 > [!TIP]
 > **From Python:**

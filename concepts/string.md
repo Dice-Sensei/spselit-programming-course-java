@@ -12,7 +12,7 @@ An immutable sequence of characters, and an object with methods.
 
 ## How it works
 
-A `String` holds text: `"Hello, Java"`. You write a string literal between double quotes. Unlike `int` or `double`, `String` is **not** a [primitive type](primitive-type.md). It is a *class*, and a `String` value is an **object**. That means a `String` variable holds a [reference](reference-vs-value.md) to the text, and that you can call *methods* on it with a dot: `s.length()`, `s.toUpperCase()`. What exactly an object is, and how you create your own kinds of objects, is the topic of S3. For now, think of a string as a value that comes with a set of useful operations.
+A `String` holds text: `"Hello, Java"`. You write a string literal between double quotes. Unlike `int` or `double`, `String` is **not** a [primitive type](primitive-type.md). It is a *class*, and a `String` value is an [**object**](object.md). That means a `String` variable holds a [reference](reference-vs-value.md) to the text, and that you can call *methods* on it with a dot: `s.length()`, `s.toUpperCase()`. What exactly an object is, and how you create your own kinds of objects, is the topic of S3. For now, think of a string as a value that comes with a set of useful operations.
 
 The most important fact about strings is that they are [immutable](immutability.md): once created, the characters in a string never change. Every method that seems to modify a string actually returns a **new** string.
 
