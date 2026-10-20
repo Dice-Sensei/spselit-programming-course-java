@@ -3,7 +3,7 @@ type: concept
 title: Reference vs value
 summary: Primitives are copied when passed around; for objects and arrays the reference is copied, so both copies point to the same thing.
 sessions: [02-methods-arrays-strings]
-status: draft
+status: complete
 ---
 
 # Reference vs value
@@ -74,7 +74,7 @@ alias[0] = 99;    // nums[0] is 99 too
 
 ### Objects of your own classes
 
-Objects you create from your own [classes](class.md) behave exactly like arrays here. `Die c = a;` copies the reference, so `c` and `a` are two names for one `Die`, and rolling `a` changes what `c` shows. See [TwoDice.java](../sessions/03-oop-classes/examples/TwoDice.java).
+Objects you create from your own [classes](class.md) behave exactly like arrays here. `Die c = a;` copies the reference, so `c` and `a` are two names for one `Die`, and rolling `a` changes what `c` shows. See [TwoDice.java](../sessions/03-oop-classes/examples/TwoDice.java). A [collection](collection.md) such as an `ArrayList` of objects holds references too, so two lists that contain the same `Card` share that one card.
 
 ### `null`
 

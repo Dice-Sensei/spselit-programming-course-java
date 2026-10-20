@@ -3,7 +3,7 @@ type: concept
 title: Array
 summary: A fixed-size, ordered sequence of values of the same type, accessed by index.
 sessions: [03-oop-classes]
-status: draft
+status: complete
 ---
 
 # Array
@@ -52,7 +52,7 @@ for (int i = 0; i < scores.length; i++) {
 }
 ```
 
-Note the condition: `i < scores.length`, not `<=`. Getting this one off by one is the most common array mistake.
+Note the condition: `i < scores.length`, not `<=`. Getting this one off by one is the most common array mistake. When a group needs to grow and shrink, use a [collection](collection.md) such as `ArrayList` instead.
 
 ### What an array variable holds
 
