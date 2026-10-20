@@ -4,13 +4,16 @@ title: OOP and classes
 session: 3
 status: skeleton
 blocks:
+  - {name: arrays, status: planned}
+  - {name: formatting, status: planned, optional: true}
+  - {name: grids, status: planned, optional: true}
   - {name: objects, status: planned}
   - {name: classes, status: planned}
   - {name: encapsulation, status: planned}
   - {name: oop-map, status: planned}
   - {name: tostring-equals, status: planned, optional: true}
   - {name: debugger, status: planned, optional: true}
-concepts: [object, class, constructor, encapsulation, access-modifier, inheritance, polymorphism, abstraction]
+concepts: [array, object, class, constructor, encapsulation, access-modifier, inheritance, polymorphism, abstraction]
 ---
 
 # S3 — OOP and classes
@@ -21,6 +24,104 @@ By the end of this session you can write a small class with private fields, a co
 
 > [!NOTE]
 > This page builds on the idea of [reference vs value](../../concepts/reference-vs-value.md) from S2; read that page first if you missed the session. You need JDK 25 or newer; if `java Hello.java` fails with an error mentioning "preview" or "unnamed class", see the setup guide's [common problems](../../setup.md#common-problems).
+
+## Arrays
+
+An [array](../../concepts/array.md) is a fixed-size, ordered sequence of values of the same type. You reach each value by its index, counted from **0**.
+
+```java
+int[] scores = {70, 85, 90};
+```
+
+`scores[0]` is `70` and `scores.length` is `3` (no parentheses). `new int[3]` creates three elements with the default value `0`. The size cannot change after the array is created. Printing an array directly gives something unreadable; `Arrays.toString(scores)` gives `[70, 85, 90]`, and `Arrays.sort(scores)` sorts it in place.
+
+Valid indexes are `0` to `length - 1`. Anything else stops the program:
+
+```
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at Uncaught.main(Uncaught.java:3)
+```
+
+Read it from the left: the kind of error, the index you used, the length of the array, and the line number where it happened.
+
+Example: [ArrayBasics.java](examples/ArrayBasics.java)
+
+> [!NOTE]
+> We loop over arrays with the indexed `for` loop (`for (int i = 0; i < scores.length; i++)`). A shorter loop for going through all elements comes in S4.
+
+> [!TIP]
+> **From Python:**
+> A Java array looks like a Python list but has a fixed size, one element type and no negative indexes or slicing. In Python every variable is a reference; in Java only the non-primitive ones are.
+
+### Exercises
+
+**Core**
+
+- Write `int sum(int[] numbers)` and `int max(int[] numbers)`, and test them on a few arrays.
+
+**Extra**
+
+- Array statistics: write methods for the minimum, maximum, mean and median of an array of numbers.
+- Reverse an array in place.
+
+**Challenge**
+
+- Rotate an array by *k* positions in place, without creating a second array.
+
+## Formatting output (if time allows)
+
+Joining text with `+` gets awkward when you want aligned columns or a fixed number of decimals. `String.format` builds a string from a *template* with placeholders:
+
+```java
+String.format("%s has %d points", "Ada", 42)    // "Ada has 42 points"
+String.format("%5.1f C = %6.1f F", 50.0, 122.0) // " 50.0 C =  122.0 F"
+```
+
+| Placeholder | Meaning |
+|---|---|
+| `%d` | a whole number (`int`, `long`) |
+| `%s` | any value as text |
+| `%f` | a decimal number (`double`) |
+| `%5d`, `%6.1f` | a minimum **width** (padded with spaces on the left); `.1` is the number of **decimals** |
+| `%-10s` | the minus sign aligns left instead of right |
+| `%05d` | pads with zeros |
+| `%%` | a literal percent sign |
+
+The arguments must fit the placeholders: a `%d` with a text argument stops the program with an `IllegalFormatConversionException`, and too few arguments give a `MissingFormatArgumentException`.
+
+> [!NOTE]
+> `%f` follows the **language settings of the computer**. On a computer set to Czech you get a decimal **comma** (`50,0`), not a point (`50.0`). Both are correct. If you need a point everywhere, write `String.format(Locale.US, "%.1f", x)`.
+
+Example: [Formatting.java](examples/Formatting.java)
+
+### Exercises
+
+**Core**
+
+- Print the Celsius-to-Fahrenheit table (for example 0 to 100 in steps of 10) with aligned columns, using `String.format`.
+
+## Grids (if time allows)
+
+A two-dimensional array is an *array of arrays*: a table with rows and columns.
+
+```java
+int[][] table = new int[3][3];     // 3 rows, 3 columns, all 0
+table[1][2] = 6;                   // row 1, column 2
+```
+
+`table.length` is the number of rows, and `table[i].length` is the length of row `i`. Each row is itself an array, so you use two nested loops to visit every cell, and `Arrays.toString(table[i])` prints one row. (`Arrays.deepToString(table)` prints the whole table at once.)
+
+Example: [Grids.java](examples/Grids.java)
+
+### Exercises
+
+**Core**
+
+- Create a 3×3 grid, fill it with the multiplication table (`(row + 1) * (column + 1)`), and print it row by row.
+
+**Extra**
+
+- Find the largest value in a grid and print where it is (its row and column).
 
 ## Objects: state plus behavior
 
@@ -74,7 +175,7 @@ Once you write any constructor, the automatic parameter-less one is gone: `new D
 
 ### Two names for one object
 
-A variable of a class type holds a *reference*, exactly like an array variable in S2. `Die c = a;` copies the reference, so `c` and `a` are two names for one die. Rolling `a` changes what `c` shows, and `a == c` is `true`, while two separately created dice are not `==`. This is [reference vs value](../../concepts/reference-vs-value.md) again, now with your own objects. Examples: [TwoDice.java](examples/TwoDice.java) and [TwoDiceOld.java](examples/TwoDiceOld.java).
+A variable of a class type holds a *reference*, exactly like an array variable. `Die c = a;` copies the reference, so `c` and `a` are two names for one die. Rolling `a` changes what `c` shows, and `a == c` is `true`, while two separately created dice are not `==`. This is [reference vs value](../../concepts/reference-vs-value.md) again, now with your own objects. Examples: [TwoDice.java](examples/TwoDice.java) and [TwoDiceOld.java](examples/TwoDiceOld.java).
 
 > [!NOTE]
 > **Java 25 and classic style.** `TwoDiceOld.java` has to declare `Die` as a `static` nested class, because `main` is static. Remove `static` and the classic file fails with this message:

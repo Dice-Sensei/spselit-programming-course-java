@@ -2,7 +2,7 @@
 type: concept
 title: Array
 summary: A fixed-size, ordered sequence of values of the same type, accessed by index.
-sessions: [02-methods-arrays-strings]
+sessions: [03-oop-classes]
 status: draft
 ---
 
@@ -73,7 +73,7 @@ The class `Arrays` has ready-made helpers (they are available without an `import
 
 ### Arrays of arrays
 
-The element type of an array can itself be an array. `int[][]` is "an array of `int` arrays", which is how a table or grid is stored: `grid[row][column]`. Each row is its own array, and rows may even have different lengths. This is covered in the optional "grids" block of S2.
+The element type of an array can itself be an array. `int[][]` is "an array of `int` arrays", which is how a table or grid is stored: `grid[row][column]`. Each row is its own array, and rows may even have different lengths. This is covered in the optional "grids" block of [S3](../sessions/03-oop-classes/README.md#grids-if-time-allows).
 
 ### What arrays cannot do
 
